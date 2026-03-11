@@ -54,11 +54,9 @@ AGREGARARISTA 4 5 EN miGrafo;
 AGREGARARISTA 1 5 EN miGrafo;
 
 // Para mostrar vecinos y recorridos, usa MOSTRAR primero
-// NOTA: BFS, DFS y RECORRER son operaciones directas, no se usan con MOSTRAR
 MOSTRAR VECINOS 1 EN miGrafo;
 
 // --- OPERACIONES DE TABLA HASH ---
-// CORREGIDO: La tabla hash SOLO acepta números como clave y valor
 CREAR TABLA_HASH miHash;
 INSERTAR 101 1000 EN miHash;
 INSERTAR 102 2000 EN miHash;
