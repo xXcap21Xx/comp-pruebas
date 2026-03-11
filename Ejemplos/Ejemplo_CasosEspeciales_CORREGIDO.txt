@@ -1,0 +1,110 @@
+
+// --- DECLARACIÓN CON TAMAÑO ---
+CREAR PILA miPila TAMANO 100;
+CREAR COLA miCola TAMANO 50;
+
+// --- DECLARACIÓN CON INICIALIZACIÓN ---
+// Usa NUMERO en lugar de ENTERO (el compilador usa NUMERO como tipo)
+CREAR NUMERO num1 = 10;
+CREAR NUMERO num2 = 20;
+CREAR TEXTO texto1 = "Hola Mundo";
+
+// --- OPERACIONES EN CADENA ---
+APILAR 1 EN miPila;
+APILAR 2 EN miPila;
+APILAR 3 EN miPila;
+MOSTRAR TOPE EN miPila;
+DESAPILAR EN miPila;
+MOSTRAR TOPE EN miPila;
+
+// --- OPERACIONES DE BÚSQUEDA ---
+CREAR LISTA_ENLAZADA miLista;
+INSERTAR_FINAL 5 EN miLista;
+INSERTAR_FINAL 10 EN miLista;
+INSERTAR_FINAL 15 EN miLista;
+
+// --- RECORRIDOS DE ÁRBOL ---
+CREAR ARBOL_BINARIO miArbol;
+AGREGARNODO 1 25 EN miArbol;
+AGREGARNODO 1 15 EN miArbol;
+AGREGARNODO 1 35 EN miArbol;
+AGREGARNODO 1 10 EN miArbol;
+AGREGARNODO 1 20 EN miArbol;
+AGREGARNODO 1 30 EN miArbol;
+AGREGARNODO 1 40 EN miArbol;
+
+MOSTRAR PREORDEN EN miArbol;
+MOSTRAR INORDEN EN miArbol;
+MOSTRAR POSTORDEN EN miArbol;
+MOSTRAR RECORRIDOPORNIVELES EN miArbol;
+
+// --- OPERACIONES AVANZADAS DE GRAFO ---
+CREAR GRAFO miGrafo;
+
+AGREGARNODO 1 100 EN miGrafo;
+AGREGARNODO 2 200 EN miGrafo;
+AGREGARNODO 3 300 EN miGrafo;
+AGREGARNODO 4 400 EN miGrafo;
+AGREGARNODO 5 500 EN miGrafo;
+
+AGREGARARISTA 1 2 EN miGrafo;
+AGREGARARISTA 2 3 EN miGrafo;
+AGREGARARISTA 3 4 EN miGrafo;
+AGREGARARISTA 4 5 EN miGrafo;
+AGREGARARISTA 1 5 EN miGrafo;
+
+// Para mostrar vecinos y recorridos, usa MOSTRAR primero
+// NOTA: BFS, DFS y RECORRER son operaciones directas, no se usan con MOSTRAR
+MOSTRAR VECINOS 1 EN miGrafo;
+
+// --- OPERACIONES DE TABLA HASH ---
+// CORREGIDO: La tabla hash SOLO acepta números como clave y valor
+CREAR TABLA_HASH miHash;
+INSERTAR 101 1000 EN miHash;
+INSERTAR 102 2000 EN miHash;
+INSERTAR 103 3000 EN miHash;
+
+// --- OPERACIONES VARIAS EN UNA SOLA LÍNEA ---
+// CORREGIDO: Usa NUMERO en lugar de ENTERO
+CREAR NUMERO resultado = 0;
+resultado = 5 + 3 * 2;
+resultado = (5 + 3) * 2;
+resultado = 10 - 5 + 3;
+resultado = 100 / 10 * 2;
+
+MOSTRAR resultado;
+
+// --- USO DE PROPIEDADES EN EXPRESIONES ---
+// Las propiedades como TOPE devuelven valores, pueden usarse en asignaciones
+CREAR NUMERO temp = 0;
+temp = TOPE EN miPila;
+temp = temp + 1;
+
+MOSTRAR temp;
+
+// --- VERIFICAR SI ESTÁ VACÍA ---
+IF (VACIA EN miPila) {
+    MOSTRAR 0;
+}
+
+IF (VACIA EN miCola) {
+    MOSTRAR 0;
+}
+
+// --- ELIMINAR ELEMENTOS ---
+ELIMINAR_FINAL EN miLista;
+ELIMINAR_INICIO EN miLista;
+
+// --- OPERACIONES CON TABLA HASH ---
+// REHASH no está implementado en el analizador semántico
+// Solo INSERTAR, ELIMINAR, BUSCAR, ACTUALIZAR, MOSTRAR
+INSERTAR 200 999 EN miHash;
+
+// --- USO DE FRENTE Y TOPE EN CONDICIONES ---
+// Las comparaciones con propiedades deben usar una variable
+CREAR NUMERO valorTope = 0;
+valorTope = TOPE EN miPila;
+IF (valorTope > 5) {
+    MOSTRAR valorTope;
+}
+

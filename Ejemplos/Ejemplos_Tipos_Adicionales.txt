@@ -1,0 +1,170 @@
+// ============================================
+// EJEMPLOS ADICIONALES: PRUEBAS COMPLEMENTARIAS
+// ============================================
+// Casos adicionales para probar el método validarCompatibilidad()
+
+// ============================================
+// PRUEBAS CON PALABRAS CLAVE DEL LENGUAJE
+// ============================================
+// Estas palabras NO deben tratarse como variables
+
+// --- ERROR: Usar PALABRA RESERVADA como variable ---
+// Esto debería dar error "Variable no existe" porque las palabras reservadas no son variables
+MOSTRAR SI;
+MOSTRAR ENTONCES;
+MOSTRAR FIN;
+MOSTRAR REPETIR;
+
+// ============================================
+// PRUEBAS CON PILA CIRCULAR
+// ============================================
+
+// --- ERROR: Usar ENCOLAR en PILA_CIRCULAR ---
+CREAR PILA_CIRCULAR miPilaCirc;
+ENCOLAR 10 EN miPilaCirc;
+
+// --- ERROR: Usar TOPE en PILA_CIRCULAR ---
+CREAR PILA_CIRCULAR miPilaCirc2;
+APILAR 5 EN miPilaCirc2;
+MOSTRAR TOPE EN miPilaCirc2;
+
+// ============================================
+// PRUEBAS CON BICOLA
+// ============================================
+
+// --- ERROR: Usar APILAR en BICOLA ---
+CREAR BICOLA miBicola;
+APILAR 10 EN miBicola;
+
+// --- ERROR: Usar TOPE en BICOLA ---
+CREAR BICOLA miBicola2;
+ENCOLAR 5 EN miBicola2;
+MOSTRAR TOPE EN miBicola2;
+
+// ============================================
+// PRUEBAS CON OPERACIONES COMPUESTAS
+// ============================================
+
+// --- ERROR: Múltiples operaciones inválidas ---
+CREAR PILA miPilaMulti;
+ENCOLAR 1 EN miPilaMulti;    // ERROR: ENCOLAR no es para PILA
+APILAR 2 EN miPilaMulti;     // OK
+FRENTE EN miPilaMulti;       // ERROR: FRENTE no es para PILA
+
+// --- ERROR: Estructura con operaciones mezcladas ---
+CREAR COLA miColaMezcla;
+APILAR 1 EN miColaMezcla;    // ERROR: APILAR no es para COLA
+ENCOLAR 2 EN miColaMezcla;   // OK
+TOPE EN miColaMezcla;        // ERROR: TOPE no es para COLA
+
+// ============================================
+// PRUEBAS DE OPERACIONES NO IMPLEMENTADAS
+// ============================================
+// Estas operaciones existen en el lenguaje pero pueden no estar en el switch
+
+// --- ERROR: REHASH en TABLA_HASH (no está implementado) ---
+CREAR TABLA_HASH miHashRehash;
+INSERTAR 1 100 EN miHashRehash;
+REHASH EN miHashRehash;
+
+// --- ERROR: PEEK en PILA (debería funcionar, pero verificar) ---
+CREAR PILA miPilaPeek;
+APILAR 10 EN miPilaPeek;
+MOSTRAR PEEK EN miPilaPeek;
+
+// --- ERROR: FRONT en COLA (debería funcionar) ---
+CREAR COLA miColaFront;
+ENCOLAR 10 EN miColaFront;
+MOSTRAR FRONT EN miColaFront;
+
+// --- ERROR: ENQUEUE en COLA ---
+CREAR COLA miColaEnqueue;
+ENQUEUE 10 EN miColaEnqueue;
+
+// --- ERROR: DEQUEUE en COLA ---
+CREAR COLA miColaDequeue;
+DEQUEUE EN miColaDequeue;
+
+// --- ERROR: PUSH en PILA ---
+CREAR PILA miPilaPush;
+PUSH 10 EN miPilaPush;
+
+// --- ERROR: POP en PILA ---
+CREAR PILA miPilaPop;
+POP EN miPilaPop;
+
+// ============================================
+// PRUEBAS CON ESTRUCTURAS ANIDADAS
+// ============================================
+
+// --- ERROR: Operación inválida en estructura anidada ---
+CREAR PILA pila1;
+CREAR PILA pila2;
+APILAR pila2 EN pila1;  // ERROR: No se puede APILAR una estructura
+
+// ============================================
+// PRUEBAS CON CASOS EXTREMOS
+// ============================================
+
+// --- ERROR: Ningún hijo en nodo operación ---
+CREAR PILA miPilaVacia;
+MOSTRAR EN miPilaVacia;  // ERROR: Falta la operación
+
+// --- ERROR: Estructura no declarada ---
+MOSTRAR TOPE EN miPilaInexistente;
+
+// --- ERROR: Usar propiedad en lugar de operación ---
+CREAR PILA miPilaProp;
+MOSTRAR 123 EN miPilaProp;  // ERROR: 123 no es una operación válida
+
+// ============================================
+// PRUEBAS CON RECORRIDOS
+// ============================================
+
+// --- ERROR: RECORRER en GRAFO (ya que BFS y DFS sí funcionan) ---
+CREAR GRAFO miGrafoRecorrer;
+AGREGARNODO X 10 EN miGrafoRecorrer;
+RECORRER EN miGrafoRecorrer;
+
+// --- ERROR: RECORRER en LISTA_ENLAZADA ---
+CREAR LISTA_ENLAZADA miListaRecorrer;
+RECORRER EN miListaRecorrer;
+
+// ============================================
+// PRUEBAS CON PROPIEDADES ESPECIALES
+// ============================================
+
+// --- ERROR: VECINOS en estructura que no es GRAFO ---
+CREAR PILA miPilaVecinos;
+MOSTRAR VECINOS 1 EN miPilaVecinos;
+
+// --- ERROR: PREORDEN en estructura que no es ARBOL ---
+CREAR COLA miColaPreorden;
+MOSTRAR PREORDEN EN miColaPreorden;
+
+// --- ERROR: INORDEN en estructura que no es ARBOL ---
+CREAR LISTA_ENLAZADA miListaInorden;
+MOSTRAR INORDEN EN miListaInorden;
+
+// --- ERROR: POSTORDEN en estructura que no es ARBOL ---
+CREAR GRAFO miGrafoPostorden;
+MOSTRAR POSTORDEN EN miGrafoPostorden;
+
+// ============================================
+// CASOS VALIDOS PARA COMPARACIÓN
+// ============================================
+
+// --- MOSTRAR funciona en cualquier estructura ---
+CREAR PILA p;
+CREAR COLA c;
+CREAR LISTA_ENLAZADA l;
+CREAR GRAFO g;
+CREAR TABLA_HASH h;
+CREAR ARBOL_BINARIO a;
+MOSTRAR EN p;
+MOSTRAR EN c;
+MOSTRAR EN l;
+MOSTRAR EN g;
+MOSTRAR EN h;
+MOSTRAR EN a;
+

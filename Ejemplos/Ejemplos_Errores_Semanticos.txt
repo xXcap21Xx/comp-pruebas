@@ -1,0 +1,104 @@
+// ============================================
+// EJEMPLOS DE ERRORES SEMÁNTICOS
+// ============================================
+
+// --- ERROR 1: Variable no declarada ---
+// Se intenta usar una variable que no existe
+MOSTRAR miVariableInexistente;
+
+// --- ERROR 2: Variable redeclarada ---
+// Se declara dos veces la misma variable
+CREAR PILA miPila;
+CREAR PILA miPila;
+
+// --- ERROR 3: Incompatibilidad de tipos ---
+// Se asigna un texto a una estructura
+CREAR NUMERO numero1 = "Esto es texto";
+
+// --- ERROR 4: Operación inválida para estructura ---
+// TOPE es para PILA, no para COLA
+CREAR COLA miCola;
+ENCOLAR 10 EN miCola;
+MOSTRAR TOPE EN miCola;
+
+// --- ERROR 5: Operación inválida para estructura ---
+// FRENTE es para COLA, no para PILA
+CREAR PILA miPila2;
+APILAR 10 EN miPila2;
+MOSTRAR FRENTE EN miPila2;
+
+// --- ERROR 6: Operación inválida para estructura ---
+// APILAR es para PILA, no para COLA
+CREAR COLA miCola2;
+APILAR 10 EN miCola2;
+
+// --- ERROR 7: Operación inválida para estructura ---
+// ENCOLAR es para COLA, no para PILA
+CREAR PILA miPila3;
+ENCOLAR 10 EN miPila3;
+
+// --- ERROR 8: Clave duplicada en TABLA_HASH ---
+// La misma clave no puede existir dos veces
+CREAR TABLA_HASH miHash;
+INSERTAR 100 1000 EN miHash;
+INSERTAR 100 2000 EN miHash;
+
+// --- ERROR 9: Eliminar clave inexistente ---
+// No se puede eliminar una clave que no existe
+CREAR TABLA_HASH miHash2;
+INSERTAR 50 500 EN miHash2;
+ELIMINAR 99 EN miHash2;
+
+// --- ERROR 10: Buscar clave inexistente ---
+BUSCAR 999 EN miHash;
+
+// --- ERROR 11: Eliminar nodo inexistente en GRAFO ---
+CREAR GRAFO miGrafo;
+ELIMINARNODO Z EN miGrafo;
+
+// --- ERROR 12: Crear arista con nodo inexistente ---
+CREAR GRAFO miGrafo2;
+AGREGARNODO A 1 EN miGrafo2;
+AGREGARARISTA A Z EN miGrafo2;
+
+// --- ERROR 13: Eliminar arista inexistente ---
+CREAR GRAFO miGrafo3;
+AGREGARNODO X 10 EN miGrafo3;
+AGREGARNODO Y 20 EN miGrafo3;
+ELIMINARARISTA X Y EN miGrafo3;
+
+// --- ERROR 14: Variable usada sin valor ---
+// Se usa una variable sin inicializar
+CREAR NUMERO numSinValor;
+MOSTRAR numSinValor;
+
+// --- ERROR 15: Operación no válida para ÁRBOL ---
+// AGREGARNODO es para GRAFO, no para ARBOL
+CREAR ARBOL_BINARIO miArbol;
+AGREGARNODO 50 EN miArbol;
+
+// --- ERROR 16: Operación no válida para LISTA ---
+// ENCOLAR es para COLA, no para LISTA
+CREAR LISTA_ENLAZADA miLista;
+ENCOLAR 10 EN miLista;
+
+// --- ERROR 17: Operación no válida para TABLA_HASH ---
+// APILAR es para PILA, no para TABLA_HASH
+CREAR TABLA_HASH miHash3;
+APILAR 10 EN miHash3;
+
+// --- ERROR 18: Incompatibilidad en expresión ---
+// No se pueden sumar texto y número
+CREAR NUMERO a = 10;
+CREAR TEXTO b = "hola";
+CREAR NUMERO c = a + b;
+
+// --- ERROR 19: Usar propiedad vacía ---
+// La estructura no existe
+MOSTRAR VACIA EN estructuraFantasma;
+
+// --- ERROR 20: BFS en estructura no válida ---
+// BFS es solo para GRAFO
+CREAR PILA miPila4;
+BFS EN miPila4;
+

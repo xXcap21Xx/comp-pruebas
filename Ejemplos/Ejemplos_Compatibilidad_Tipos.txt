@@ -1,0 +1,326 @@
+// ============================================
+// EJEMPLOS: PRUEBAS DE COMPATIBILIDAD DE TIPOS
+// ============================================
+// Este archivo contiene casos de prueba para validar el método
+// validarCompatibilidad() en AnalizadorSemantico.java
+// Error esperado: DSL(304) - Comando no compatible con estructura
+
+// ============================================
+// ERRORES CON PILAS (PILA / PILA_CIRCULAR)
+// ============================================
+// Operaciones válidas: APILAR, PUSH, DESAPILAR, POP, TOPE, PEEK, VACIA, LLENA, TAMANO, MOSTRAR
+
+// --- ERROR: Usar ENCOLAR en PILA ---
+CREAR PILA miPila;
+ENCOLAR 10 EN miPila;
+
+// --- ERROR: Usar DESENCOLAR en PILA ---
+CREAR PILA miPila2;
+DESENCOLAR EN miPila2;
+
+// --- ERROR: Usar FRENTE en PILA ---
+CREAR PILA miPila3;
+APILAR 5 EN miPila3;
+MOSTRAR FRENTE EN miPila3;
+
+// --- ERROR: Usar INSERTAR en PILA ---
+CREAR PILA miPila4;
+INSERTAR 10 EN miPila4;
+
+// --- ERROR: Usar ELIMINAR en PILA ---
+CREAR PILA miPila5;
+ELIMINAR EN miPila5;
+
+// --- ERROR: Usar BFS en PILA ---
+CREAR PILA miPila6;
+BFS EN miPila6;
+
+// --- ERROR: Usar DFS en PILA ---
+CREAR PILA miPila7;
+DFS EN miPila7;
+
+// --- ERROR: Usar AGREGARNODO en PILA ---
+CREAR PILA miPila8;
+AGREGARNODO 1 100 EN miPila8;
+
+// ============================================
+// ERRORES CON COLAS (COLA / BICOLA)
+// ============================================
+// Operaciones válidas: ENCOLAR, ENQUEUE, DESENCOLAR, DEQUEUE, FRENTE, FRONT, VACIA, LLENA, TAMANO, MOSTRAR
+
+// --- ERROR: Usar APILAR en COLA ---
+CREAR COLA miCola;
+APILAR 10 EN miCola;
+
+// --- ERROR: Usar DESAPILAR en COLA ---
+CREAR COLA miCola2;
+DESAPILAR EN miCola2;
+
+// --- ERROR: Usar TOPE en COLA ---
+CREAR COLA miCola3;
+ENCOLAR 5 EN miCola3;
+MOSTRAR TOPE EN miCola3;
+
+// --- ERROR: Usar INSERTAR en COLA ---
+CREAR COLA miCola4;
+INSERTAR 10 EN miCola4;
+
+// --- ERROR: Usar BFS en COLA ---
+CREAR COLA miCola5;
+BFS EN miCola5;
+
+// --- ERROR: Usar DFS en COLA ---
+CREAR COLA miCola6;
+DFS EN miCola6;
+
+// ============================================
+// ERRORES CON LISTAS ENLAZADAS
+// ============================================
+// Operaciones válidas: INSERTAR, INSERTAR_INICIO, INSERTAR_FINAL, INSERTAR_EN_POSICION,
+//                      ELIMINAR, ELIMINAR_INICIO, ELIMINAR_FINAL, ELIMINAR_POSICION,
+//                      BUSCAR, RECORRER, TAMANO, MOSTRAR
+
+// --- ERROR: Usar APILAR en LISTA ---
+CREAR LISTA_ENLAZADA miLista;
+APILAR 10 EN miLista;
+
+// --- ERROR: Usar ENCOLAR en LISTA ---
+CREAR LISTA_ENLAZADA miLista2;
+ENCOLAR 10 EN miLista2;
+
+// --- ERROR: Usar TOPE en LISTA ---
+CREAR LISTA_ENLAZADA miLista3;
+INSERTAR_FINAL 5 EN miLista3;
+MOSTRAR TOPE EN miLista3;
+
+// --- ERROR: Usar FRENTE en LISTA ---
+CREAR LISTA_ENLAZADA miLista4;
+INSERTAR_FINAL 5 EN miLista4;
+MOSTRAR FRENTE EN miLista4;
+
+// --- ERROR: Usar BFS en LISTA ---
+CREAR LISTA_ENLAZADA miLista5;
+BFS EN miLista5;
+
+// --- ERROR: Usar DFS en LISTA ---
+CREAR LISTA_ENLAZADA miLista6;
+DFS EN miLista6;
+
+// --- ERROR: Usar AGREGARNODO en LISTA ---
+CREAR LISTA_ENLAZADA miLista7;
+AGREGARNODO 1 100 EN miLista7;
+
+// ============================================
+// ERRORES CON LISTAS CIRCULARES
+// ============================================
+
+// --- ERROR: Usar APILAR en LISTA_CIRCULAR ---
+CREAR LISTA_CIRCULAR miListaCirc;
+APILAR 10 EN miListaCirc;
+
+// --- ERROR: Usar TOPE en LISTA_CIRCULAR ---
+CREAR LISTA_CIRCULAR miListaCirc2;
+INSERTAR_FINAL 5 EN miListaCirc2;
+MOSTRAR TOPE EN miListaCirc2;
+
+// ============================================
+// ERRORES CON LISTAS DOBLEMENTE ENLAZADAS
+// ============================================
+// Operaciones válidas: INSERTAR, INSERTAR_INICIO, INSERTAR_FINAL, INSERTAR_EN_POSICION,
+//                      ELIMINAR, ELIMINAR_INICIO, ELIMINAR_FINAL, ELIMINAR_POSICION,
+//                      BUSCAR, RECORRERADELANTE, RECORRERATRAS, TAMANO, MOSTRAR
+
+// --- ERROR: Usar APILAR en LISTA_DOBLE ---
+CREAR LISTA_DOBLE_ENLAZADA miListaDoble;
+APILAR 10 EN miListaDoble;
+
+// --- ERROR: Usar ENCOLAR en LISTA_DOBLE ---
+CREAR LISTA_DOBLE_ENLAZADA miListaDoble2;
+ENCOLAR 10 EN miListaDoble2;
+
+// --- ERROR: Usar TOPE en LISTA_DOBLE ---
+CREAR LISTA_DOBLE_ENLAZADA miListaDoble3;
+INSERTAR_FINAL 5 EN miListaDoble3;
+MOSTRAR TOPE EN miListaDoble3;
+
+// --- ERROR: Usar BFS en LISTA_DOBLE ---
+CREAR LISTA_DOBLE_ENLAZADA miListaDoble4;
+BFS EN miListaDoble4;
+
+// ============================================
+// ERRORES CON GRAFOS
+// ============================================
+// Operaciones válidas: AGREGARNODO, ELIMINARNODO, AGREGARARISTA, ELIMINARARISTA, BFS, DFS, MOSTRAR
+
+// --- ERROR: Usar APILAR en GRAFO ---
+CREAR GRAFO miGrafo;
+APILAR 10 EN miGrafo;
+
+// --- ERROR: Usar ENCOLAR en GRAFO ---
+CREAR GRAFO miGrafo2;
+ENCOLAR 10 EN miGrafo2;
+
+// --- ERROR: Usar TOPE en GRAFO ---
+CREAR GRAFO miGrafo3;
+AGREGARNODO 1 100 EN miGrafo3;
+MOSTRAR TOPE EN miGrafo3;
+
+// --- ERROR: Usar FRENTE en GRAFO ---
+CREAR GRAFO miGrafo4;
+AGREGARNODO 1 100 EN miGrafo4;
+MOSTRAR FRENTE EN miGrafo4;
+
+// --- ERROR: Usar INSERTAR en GRAFO ---
+CREAR GRAFO miGrafo5;
+INSERTAR 10 100 EN miGrafo5;
+
+// --- ERROR: Usar ELIMINAR en GRAFO ---
+CREAR GRAFO miGrafo6;
+ELIMINAR 10 EN miGrafo6;
+
+// --- ERROR: Usar RECORRER en GRAFO ---
+CREAR GRAFO miGrafo7;
+RECORRER EN miGrafo7;
+
+// ============================================
+// ERRORES CON TABLAS HASH
+// ============================================
+// Operaciones válidas: INSERTAR, ELIMINAR, BUSCAR, ACTUALIZAR, MOSTRAR
+
+// --- ERROR: Usar APILAR en TABLA_HASH ---
+CREAR TABLA_HASH miHash;
+APILAR 10 EN miHash;
+
+// --- ERROR: Usar ENCOLAR en TABLA_HASH ---
+CREAR TABLA_HASH miHash2;
+ENCOLAR 10 EN miHash2;
+
+// --- ERROR: Usar TOPE en TABLA_HASH ---
+CREAR TABLA_HASH miHash3;
+INSERTAR 101 1000 EN miHash3;
+MOSTRAR TOPE EN miHash3;
+
+// --- ERROR: Usar FRENTE en TABLA_HASH ---
+CREAR TABLA_HASH miHash4;
+INSERTAR 101 1000 EN miHash4;
+MOSTRAR FRENTE EN miHash4;
+
+// --- ERROR: Usar BFS en TABLA_HASH ---
+CREAR TABLA_HASH miHash5;
+BFS EN miHash5;
+
+// --- ERROR: Usar DFS en TABLA_HASH ---
+CREAR TABLA_HASH miHash6;
+DFS EN miHash6;
+
+// --- ERROR: Usar AGREGARNODO en TABLA_HASH ---
+CREAR TABLA_HASH miHash7;
+AGREGARNODO 1 100 EN miHash7;
+
+// --- ERROR: Usar RECORRER en TABLA_HASH ---
+CREAR TABLA_HASH miHash8;
+RECORRER EN miHash8;
+
+// ============================================
+// ERRORES CON ÁRBOLES BINARIOS
+// ============================================
+// NOTA: El analizador semántico actual NO tiene un case para ARBOL_BINARIO
+// Por lo tanto, cualquier operación en ARBOL generará error o pasará sin validación
+
+// --- ERROR: Usar APILAR en ÁRBOL ---
+CREAR ARBOL_BINARIO miArbol;
+APILAR 10 EN miArbol;
+
+// --- ERROR: Usar ENCOLAR en ÁRBOL ---
+CREAR ARBOL_BINARIO miArbol2;
+ENCOLAR 10 EN miArbol2;
+
+// --- ERROR: Usar INSERTAR en ÁRBOL ---
+CREAR ARBOL_BINARIO miArbol3;
+INSERTAR 10 EN miArbol3;
+
+// --- ERROR: Usar BFS en ÁRBOL ---
+CREAR ARBOL_BINARIO miArbol4;
+BFS EN miArbol4;
+
+// --- ERROR: Usar DFS en ÁRBOL ---
+CREAR ARBOL_BINARIO miArbol5;
+DFS EN miArbol5;
+
+// ============================================
+// ERRORES CON TIPOS PRIMITIVOS (NUMERO/TEXTO)
+// ============================================
+// Operaciones válidas para NUMERO y TEXTO: SOLO MOSTRAR
+
+// --- ERROR: Usar APILAR en NUMERO ---
+CREAR NUMERO miNumero = 10;
+APILAR 5 EN miNumero;
+
+// --- ERROR: Usar ENCOLAR en NUMERO ---
+CREAR NUMERO miNumero2 = 10;
+ENCOLAR 5 EN miNumero2;
+
+// --- ERROR: Usar INSERTAR en NUMERO ---
+CREAR NUMERO miNumero3 = 10;
+INSERTAR 5 EN miNumero3;
+
+// --- ERROR: Usar TOPE en TEXTO ---
+CREAR TEXTO miTexto = "Hola";
+MOSTRAR TOPE EN miTexto;
+
+// --- ERROR: Usar FRENTE en TEXTO ---
+CREAR TEXTO miTexto2 = "Hola";
+MOSTRAR FRENTE EN miTexto2;
+
+// --- ERROR: Usar BUSCAR en NUMERO ---
+CREAR NUMERO miNumero4 = 10;
+BUSCAR 5 EN miNumero4;
+
+// --- ERROR: Usar BFS en TEXTO ---
+CREAR TEXTO miTexto3 = "Hola";
+BFS EN miTexto3;
+
+// ============================================
+// OPERACIONES VÁLIDAS (Para comparación)
+// ============================================
+// Estas operaciones NO deben generar errores
+
+// --- PILA: Operaciones válidas ---
+CREAR PILA pilaValida;
+APILAR 1 EN pilaValida;
+APILAR 2 EN pilaValida;
+MOSTRAR TOPE EN pilaValida;
+DESAPILAR EN pilaValida;
+MOSTRAR VACIA EN pilaValida;
+MOSTRAR TAMANO EN pilaValida;
+
+// --- COLA: Operaciones válidas ---
+CREAR COLA colaValida;
+ENCOLAR 1 EN colaValida;
+ENCOLAR 2 EN colaValida;
+MOSTRAR FRENTE EN colaValida;
+DESENCOLAR EN colaValida;
+MOSTRAR VACIA EN colaValida;
+
+// --- LISTA: Operaciones válidas ---
+CREAR LISTA_ENLAZADA listaValida;
+INSERTAR_FINAL 1 EN listaValida;
+INSERTAR_FINAL 2 EN listaValida;
+BUSCAR 1 EN listaValida;
+ELIMINAR_FINAL EN listaValida;
+
+// --- GRAFO: Operaciones válidas ---
+CREAR GRAFO grafoValido;
+AGREGARNODO A 1 EN grafoValido;
+AGREGARNODO B 2 EN grafoValido;
+AGREGARARISTA A B EN grafoValido;
+BFS EN grafoValido;
+DFS EN grafoValido;
+
+// --- TABLA_HASH: Operaciones válidas ---
+CREAR TABLA_HASH hashValido;
+INSERTAR 100 1000 EN hashValido;
+BUSCAR 100 EN hashValido;
+ELIMINAR 100 EN hashValido;
+ACTUALIZAR 100 2000 EN hashValido;
+
